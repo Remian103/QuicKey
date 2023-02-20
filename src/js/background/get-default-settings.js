@@ -28,6 +28,7 @@ define([
 		[k.IncludeClosedTabs.Key]: true,
 		[k.ShowTabCount.Key]: false,
 		[k.UsePinyin.Key]: false,
+		[k.MaxHistoryLength.Key]: 2000,
 		[k.RestoreLastQuery.Key]: false,
 		[k.ShowBookmarkPaths.Key]: true,
 		[k.CurrentWindowLimitRecents.Key]: false,

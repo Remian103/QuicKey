@@ -315,7 +315,7 @@ define("popup/app", [
 
 				if (!this.history.length) {
 					this.loadPromisedItems(
-						() => getHistory(usePinyin),
+						() => getHistory(this.settings[k.MaxHistoryLength.Key], usePinyin),
 						"history"
 					);
 				}

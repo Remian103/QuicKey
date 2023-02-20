@@ -101,7 +101,38 @@
 					{radioButtons}
 				</ul>
 			</Controls.Group>
-		}
+		},
+
+
+		TextField: function(
+			props)
+		{
+			function onChange(
+				event)
+			{
+				props.onChange(event.target.value, props.id);
+			}
+
+			return <div className="control">
+				<label
+					title={
+						props.disabled
+							? props.tooltipDisabled
+							: props.tooltip
+					}
+				>
+					<span>{props.label}</span>
+					<input type="number"
+						   style={{opacity: 1, zIndex: 'unset'}}
+						   min={1}
+						   value={props.value}
+						   disabled={props.disabled}
+						   onChange={onChange}
+					/>
+					{props.children}
+				</label>
+			</div>
+		},
 	};
 
 
@@ -113,6 +144,9 @@
 	};
 	Controls.RadioGroup.defaultProps = {
 		onChange: noop
+	};
+	Controls.TextField.defaultProps = {
+		 onChange: noop
 	};
 
 

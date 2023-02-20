@@ -9,7 +9,6 @@ define([
 	addURLs,
 	{addPinyin}
 ) {
-	const RequestedItemCount = 2000;
 	const LoopItemCount = 1000;
 	const FilenamePattern = /([^/]*)\/([^/]+)?$/;
 
@@ -18,12 +17,14 @@ define([
 
 
 	return function getHistory(
+		maxResultLength,
 		usePinyin)
 	{
 		const ids = {};
 		const urls = {};
 		let count = 0;
 		let lastItem = null;
+		const RequestedItemCount = maxResultLength > 0 ? maxResultLength : 2000;
 
 		return loop(() => {
 			const endTime = (lastItem && lastItem.lastVisitTime) || Date.now();

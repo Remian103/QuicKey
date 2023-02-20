@@ -66,6 +66,9 @@ define([
 		UsePinyin: {
 			Key: "usePinyin"
 		},
+		MaxHistoryLength: {
+			Key: "maxHistoryLength"
+		},
 		RestoreLastQuery: {
 			Key: "restoreLastQuery"
 		},

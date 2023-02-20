@@ -9,7 +9,7 @@ define([
 	React,
 	Shortcuts,
 	ShortcutPicker,
-	{Checkbox, RadioButton, RadioGroup},
+	{Checkbox, RadioButton, RadioGroup, TextField},
 	{IncognitoIcon, InPrivateIcon, HistoryIcon, WindowIcon},
 	k
 ) {
@@ -206,6 +206,17 @@ define([
 						id={k.UsePinyin.Key}
 						label="Use pinyin to match Chinese characters in titles and URLs"
 						value={settings[k.UsePinyin.Key]}
+						onChange={onChange}
+					/>
+				</NewSetting>
+				<NewSetting
+					addedVersion={10}
+					lastSeenOptionsVersion={lastSeenOptionsVersion}
+				>
+					<TextField
+						id={k.MaxHistoryLength.Key}
+						label="Max search result length in history search:"
+						value={settings[k.MaxHistoryLength.Key]}
 						onChange={onChange}
 					/>
 				</NewSetting>

@@ -96,6 +96,14 @@
 		--background: #ccc;
 	}
 
+	.control input[type="number"] {
+		--background: #e6e6e7;
+	}
+
+	.control input[type="number"]:disabled {
+		--background: #333;
+	}
+
 	.control input:disabled ~ span {
 		--opacity: .4;
 	}
@@ -437,6 +445,21 @@ main {
 }
 
 .control input[type="radio"]:disabled ~ .indicator:after {
+	background: var(--background, #7b7b7b);
+}
+
+.control input[type="number"] {
+	margin-left: 0.5em;
+	opacity: unset;
+	z-index: unset;
+	height: 20px;
+	border: none;
+	border-radius: .25em;
+	text-align: right;
+	background: var(--background, #fff);
+}
+
+.control input[type="number"]:disabled {
 	background: var(--background, #7b7b7b);
 }
 
